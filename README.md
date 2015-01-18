@@ -30,6 +30,8 @@ Download the latest google adwords library by just adding the above package in c
 5) Run command php composer.phar dump-autoload
 
 6) Open the file Clientservice.php and refer the downloadReport function before this make sure to inject the AdwordsService class object with Client service class.
+
+
 <?php
 class ClientServiceServiceProvider extends ServiceProvider {
     public function register() {
