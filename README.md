@@ -23,6 +23,8 @@ Download the latest google adwords library by just adding the above package in c
 3) Place the repository files in your respective project directory.
 
 4) Open the laravel config file app.php and add following in `providers` array
+
+
 	'providers' =>	array(
 		'Library\Adwords\AdwordsServiceProvider',
 		),
@@ -30,6 +32,8 @@ Download the latest google adwords library by just adding the above package in c
 		
 		
 	Add following in `aliases` array
+	
+	
 	'aliases' => array(
                 'AdwordsBO'         => 'Library\Adwords\AdwordsFacade'
 		),
