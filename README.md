@@ -4,14 +4,16 @@ Connects with Google Adwords api and fetches the adwords performance reports via
 
 ### How to use the service provider class
 Follow the below instructions on how to use this class
-1)  In the `require` key of `composer.json` file add the following
+1) In the `require` key of `composer.json` file add the following
 	
-	"googleads/googleads-php-lib": "dev-master"
-	add the following in `classmap` key
-	Make one folder `libraries` or whatever you want in my case I have made as `libraries` and add the 		        following in `classmap` key
+	"googleads/googleads-php-lib": "dev-master",
+	
+	
+add the following in `classmap` key
+Make one folder `libraries` or whatever you want in my case I have made as `libraries` and add the following in `classmap` key
 	
 	"app/libraries",
-        "app/libraries/adwords"
+        "app/libraries/adwords",
        
 
 Download the latest google adwords library by just adding the above package in composer.json file and run the command php composer.phar update.
@@ -20,14 +22,19 @@ Download the latest google adwords library by just adding the above package in c
 
 3) Place the repository files in your respective project directory.
 
-4)  Open the laravel config file app.php and add following in `providers` array
-		
+4) Open the laravel config file app.php and add following in `providers` array
+	'providers' =>	array(
 		'Library\Adwords\AdwordsServiceProvider',
-	
-	add following in `aliases` array
-
+		),
+		
+		
+		
+	Add following in `aliases` array
+	'aliases' => array(
                 'AdwordsBO'         => 'Library\Adwords\AdwordsFacade'
-	
+		),
+		
+		
 
 5) Run command php composer.phar dump-autoload
 
